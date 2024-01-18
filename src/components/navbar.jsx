@@ -1,36 +1,36 @@
 import React from "react";
-// import { HomeIcon, UserRoundSearch, Newspaper, Tv2, Send } from "lucide-react";
+import { HomeIcon, UserRoundSearch, Newspaper, Tv2, Send } from "lucide-react";
 import { Link } from "react-scroll";
 import Logo from '../assets/logotop.svg'
 const Nav = [
   {
     id: 1,
     name: "Home",
-    // icon: HomeIcon,
+    icon: HomeIcon,
     Link: "home",
   },
   {
     id: 2,
     name: "About",
-    // icon: UserRoundSearch,
+    icon: UserRoundSearch,
     Link: "about",
   },
   {
     id: 3,
     name: "Resume",
-    // icon: Newspaper,
+    icon: Newspaper,
     Link: "resume",
   },
   {
     id: 4,
     name: "Portfolio",
-    // icon: Tv2,
+    icon: Tv2,
     Link: "portfolio",
   },
   {
     id: 5,
     name: "Contact",
-    // icon: Send,
+    icon: Send,
     Link: "contact",
   },
 ];
@@ -56,10 +56,9 @@ const Navbar = () => {
                 offset={-150}
                 duration={500}
               >
-                {/* <div className="flex justify-center items-center space-x-2"> */}
-                {/* <h1>{React.createElement(item.icon)}</h1> */}
-                <h1>{item.name}</h1>
-                {/* </div> */}
+                <div className="flex justify-center items-center space-x-2">
+                <h1>{React.createElement(item.icon)}</h1><h1>{item.name}</h1>
+                </div>
               </Link>
             </div>
           ))}
